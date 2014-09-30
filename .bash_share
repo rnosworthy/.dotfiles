@@ -4,19 +4,16 @@ alias vi='vim'
 alias svi='sudo vim -u ~/.vimrc'
 
 function gitdots(){
-
+    
+    cd ~
+    
     if [ ! -d ~/.dotfiles ]; then
-       md ~/.dotfiles 
+        git clone git@github.com:rnosworthy/.dotfiles.git    
     fi
     
-    
-    wget -q -O - "$@" https://raw.github.com/rnosworthy/personal/master/.dotfiles/.vimrc > ~/.vimrc
-    wget -q -O - "$@" https://raw.github.com/rnosworthy/personal/master/.dotfiles/.bash_profile > ~/.bash_profile
-    wget -q -O - "$@" https://raw.github.com/rnosworthy/personal/master/.dotfiles/.bash_files > ~/.dotfiles/.bash_files
-    wget -q -O - "$@" https://raw.github.com/rnosworthy/personal/master/.dotfiles/.bash_history > ~/.dotfiles/.bash_history
-    wget -q -O - "$@" https://raw.github.com/rnosworthy/personal/master/.dotfiles/.bash_prompt > ~/.dotfiles/.bash_prompt
-    wget -q -O - "$@" https://raw.github.com/rnosworthy/personal/master/.dotfiles/.bash_share > ~/.dotfiles/.bash_share
-
+    cd .dotfiles
+    git pull
+ 
 }
 
 function sf(){
