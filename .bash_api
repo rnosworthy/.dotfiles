@@ -9,3 +9,9 @@ function updateapi(){
     echo "Updating Swagger"
     swagger
 }
+
+function token(){
+    crm
+    phpunit tests/core/AuthenticateTest.php
+}
+
