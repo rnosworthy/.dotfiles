@@ -13,7 +13,10 @@ function gitdots(){
     
     cd .dotfiles
     git pull
- 
+    
+    cp .bash_profile ../
+    cp .vimrc ../
+    reload 
 }
 
 function sf(){

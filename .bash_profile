@@ -2,6 +2,11 @@ if [ -f ~/.dotfiles/.bash_files ]; then
     . ~/.dotfiles/.bash_files
 fi
 
+if [ -f ~/.dotfiles/.bash_local ]; then
+    . ~/.dotfiles/.bash_local
+fi
+
+
 if [ -f ~/.dotfiles/.bash_share ]; then
     . ~/.dotfiles/.bash_share
 fi
