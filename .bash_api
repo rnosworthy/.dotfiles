@@ -1,3 +1,25 @@
+alias vi='sudo vsi'
+alias apre='sudo /etc/init.d/apache2 restart'
+alias apa='cd /etc/apache2'
+alias crm='cd /var/www/oss/crm'
+alias oss='cd /var/www/oss/'
+alias gs='git status'
+alias swagger='php /var/www/oss/crm/lib/vendor/zircote/swagger-php/swagger.phar /var/www/oss/crm/colony/ -o /var/www/oss/crm/public/api-docs --bootstrap /var/www/oss/crm/config/swagger.php'
+alias composer='php /var/www/oss/crm/lib/composer.phar'
+alias codegen='/var/www/oss/crm/colony/qcubed/includes/qcubed/_core/_devtools_cli/codegen.cli'
+
+# SSH auto-completion based on entries in known_hosts.
+if [[ -e ~/.ssh/known_hosts ]]; then
+  complete -o default -W "$(cat ~/.ssh/known_hosts | sed 's/[, ].*//' | sort | uniq | grep -v '[0-9]')" ssh scp sftp
+fi
+
+#if [[ -e ~/.ssh/config ]]; then
+#    complete -o default -W "$(cat ~/.ssh/config | sed '' | sort | uniq)"
+#fi
+
+export PATH="/usr/local/bin:/usr/local/sbin:/var/www/oss/crm/lib/vendor/bin:$PATH"
+export PHP_AUTOCONF="/usr/bin/autoconf"
+
 function updateapi(){
     oss
     echo "Fetching master branch from github"
