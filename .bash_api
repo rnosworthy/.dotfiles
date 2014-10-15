@@ -1,3 +1,4 @@
+alias tail='sudo tail'
 alias vi='sudo vsi'
 alias apre='sudo /etc/init.d/apache2 restart'
 alias apa='cd /etc/apache2'
