@@ -26,3 +26,10 @@ fi
 if [ -f ~/.dotfiles/.bash_api ]; then
     . ~/.dotfiles/.bash_api
 fi
+
+if [ -f ~/.dotfiles/.bash_debian ]; then
+    . ~/.dotfiles/.bash_debian
+fi
+
+
+
