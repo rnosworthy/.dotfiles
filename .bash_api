@@ -3,3 +3,8 @@ function token(){
     phpunit tests/core/AuthenticateTest.php
 }
 
+
+alias aloge='tail -f /var/log/apache2/error.log'
+alias aloga='tail -f /var/log/apache2/access.log'
+alias nloge='tail -f /var/log/nginx/error.log'
+alias nloga='tail -f /var/log/nginx/access.log'
