@@ -1,0 +1,2 @@
+alias elog='sudo tail -f /var/log/apache2/error.log'
+alias alog='sudo tail -f /var/log/apache2/access.log'
