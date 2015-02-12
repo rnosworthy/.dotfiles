@@ -1,1 +1,2 @@
-alias plog = 'sudo tail -f /var/log/postgresql/postgresql-9.3-main.log'
+alias plog='sudo tail -f /var/log/postgresql/postgresql-9.3-main.log'
+

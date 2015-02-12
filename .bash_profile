@@ -31,5 +31,9 @@ if [ -f ~/.dotfiles/.bash_debian ]; then
     . ~/.dotfiles/.bash_debian
 fi
 
+if [ -f ~/.dotfiles/.bash_db ]; then
+    . ~/.dotfiles/.bash_db
+fi
+
 
 
