@@ -3,6 +3,10 @@ alias reload='source ~/.bash_profile'
 alias vi='vim'
 alias svi='sudo vim'
 alias gs='git status'
+alias gd='git diff'
+alias gc='git commit'
+alias ga='git add'
+alias gm='git merge --no-ff'
 
 function gitdots(){
     
