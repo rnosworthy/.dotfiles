@@ -4,7 +4,7 @@ function token(){
 }
 
 
-alias aloge='tail -f /var/log/apache2/error.log'
-alias aloga='tail -f /var/log/apache2/access.log'
-alias nloge='tail -f /var/log/nginx/error.log'
-alias nloga='tail -f /var/log/nginx/access.log'
+alias aloge='sudo tail -f /var/log/apache2/error.log'
+alias aloga='sudo tail -f /var/log/apache2/access.log'
+alias nloge='sudo tail -f /var/log/nginx/error.log'
+alias nloga='sudo tail -f /var/log/nginx/access.log'
