@@ -34,6 +34,10 @@ if [ -f ~/.dotfiles/.bash_local ]; then
     . ~/.dotfiles/.bash_local
 fi
 
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
 
 
 
