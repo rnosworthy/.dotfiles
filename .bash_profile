@@ -30,8 +30,8 @@ if [ -f ~/.dotfiles/.bash_db ]; then
     . ~/.dotfiles/.bash_db
 fi
 
-if [ -f ~/.dotfiles/.bash_local ]; then
-    . ~/.dotfiles/.bash_local
+if [ -f ~/.dotfiles/.bash_mac ]; then
+    . ~/.dotfiles/.bash_mac
 fi
 
 if [ -f ~/.bashrc ]; then

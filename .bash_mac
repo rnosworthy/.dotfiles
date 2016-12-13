@@ -1,0 +1,8 @@
+function resetdb(){
+    psql -h 127.0.0.1 -d postgres -U ossuser -c "select pg_terminate_backend(pid) from pg_stat_activity where datname='$1';"
+    psql -h 127.0.0.1 -d postgres -U ossuser -c "drop database $1;"
+    psql -h 127.0.0.1 -d postgres -U ossuser -c "create database $1;"
+    rm ~/temp/$1.sql
+    pg_dump -U postgres -h 172.19.1.50 -d $1 > ~/temp/$1.sql
+    psql -h 127.0.0.1 -U ossuser -d $1 < ~/temp/$1.sql
+}
