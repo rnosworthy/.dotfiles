@@ -3,6 +3,11 @@ function resetdb(){
     psql -h 127.0.0.1 -d postgres -U ossuser -c "drop database $1;"
     psql -h 127.0.0.1 -d postgres -U ossuser -c "create database $1;"
     rm ~/temp/$1.sql
-    pg_dump -U postgres -h 172.19.1.50 -d $1 > ~/temp/$1.sql
+    pg_dump -U postgres -h $2 -d $1 > ~/temp/$1.sql
     psql -h 127.0.0.1 -U ossuser -d $1 < ~/temp/$1.sql
 }
+
+export SERVER_INSTANCE=dev
+export SERVER_LOCATION=van
+
+set -o vi
