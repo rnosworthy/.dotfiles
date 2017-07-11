@@ -9,5 +9,3 @@ function resetdb(){
 
 export SERVER_INSTANCE=dev
 export SERVER_LOCATION=van
-
-set -o vi
