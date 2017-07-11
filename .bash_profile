@@ -39,5 +39,4 @@ if [ -f ~/.bashrc ]; then
 fi
 
 
-
-
+set -o vi
